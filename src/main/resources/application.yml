@@ -21,3 +21,8 @@ management:
       exposure:
         include: "*"
   context-path: http://localhost:${server.port}/actuator
+
+info:
+  application:
+    name: gateway-service
+    description: Ticketing Application Gateway Service
