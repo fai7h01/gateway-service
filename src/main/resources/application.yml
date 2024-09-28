@@ -7,6 +7,17 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${keycloak.address}/auth/realms/cydeo-dev
+
+keycloak:
+  address: http://localhost:8080
+
+server:
+  port: 8762
 
 eureka:
   instance:
