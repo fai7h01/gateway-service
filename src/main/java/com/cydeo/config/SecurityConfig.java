@@ -19,6 +19,9 @@ public class SecurityConfig {
                 .pathMatchers(HttpMethod.GET, "/swagger-ui.html/**").permitAll()
                 .pathMatchers(HttpMethod.GET, "/swagger-resources").permitAll()
                 .pathMatchers(HttpMethod.GET, "/v3/api-docs/**").permitAll()
+                .pathMatchers(HttpMethod.GET, "/user-service/v3/**").permitAll()
+                .pathMatchers(HttpMethod.GET, "/project-service/v3/**").permitAll()
+                .pathMatchers(HttpMethod.GET, "/task-service/v3/**").permitAll()
                 .anyExchange().authenticated().and()
                 .oauth2ResourceServer().jwt().and().and().build();
     }
