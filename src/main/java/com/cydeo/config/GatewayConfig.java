@@ -16,11 +16,11 @@ public class GatewayConfig {
                         r.path("/user-service/**")
                         .filters(f -> f.rewritePath("/user-service/(?<path>.*)", "/${path}"))
                         .uri("lb://user-service"))
-                .route("user-service", r ->
+                .route("project-service", r ->
                         r.path("/project-service/**")
                         .filters(f -> f.rewritePath("/project-service/(?<path>.*)", "/${path}"))
                         .uri("lb://project-service"))
-                .route("user-service", r ->
+                .route("task-service", r ->
                         r.path("/task-service/**")
                         .filters(f -> f.rewritePath("/task-service/(?<path>.*)", "/${path}"))
                         .uri("lb://task-service"))
